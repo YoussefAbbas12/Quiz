@@ -1,0 +1,196 @@
+/* التنسيقات الأساسية */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+/* تصميم الحاوية */
+.quiz-container {
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* تصميم العناوين */
+h1, h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* تنسيق المدخلات */
+label {
+    font-size: 18px;
+}
+
+#numQuestions {
+    margin: 10px 0;
+    width: 80%;
+}
+
+/* تنسيق الأزرار */
+.start-btn, .choice-btn, .hint-btn, .restart-btn, .new-quiz-btn {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* تأثيرات الأزرار عند التمرير */
+.start-btn:hover, .choice-btn:hover, .hint-btn:hover, .restart-btn:hover, .new-quiz-btn:hover {
+    background-color: #0056b3;
+}
+
+/* تصميم حاوية المحتوى */
+.quiz-content {
+    margin-top: 30px;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+/* تصميم صندوق السؤال */
+.question-box {
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    animation: fade-in 0.5s ease-in-out;
+}
+
+/* تصميم الأزرار الداخلية */
+.choices button {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* تصميم زر المساعدة */
+.hint-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffeb3b;
+    color: black;
+    font-size: 20px;
+}
+
+.hint-btn:hover {
+    background-color: #ffc107;
+}
+
+/* تأثير نص المساعدة */
+.hint-text {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+/* تأثيرات صندوق النتيجة */
+.result-box {
+    animation: fade-in 0.5s ease-in-out;
+    border: 3px solid #28a745;
+    border-radius: 15px;
+    padding: 25px;
+    background-color: #e6ffe6;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* تأثير الانتقال عند ظهور النتيجة */
+.show-result {
+    animation: result-animation 1s ease-in-out forwards;
+}
+
+/* تأثير عند عرض النتيجة */
+@keyframes result-animation {
+    0% {
+        background-color: #ffdddd;
+    }
+    50% {
+        background-color: #ffffe6;
+    }
+    100% {
+        background-color: #e6ffe6;
+    }
+}
+
+/* تأثيرات انتقال العناصر */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fade-out 0.3s ease-in-out forwards;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* تصميم الاستجابة (Responsive) */
+@media only screen and (max-width: 600px) {
+    .quiz-container, .question-box, .result-box {
+        width: 95%;
+    }
+}
+
+
+/* الألوان الافتراضية للأزرار */
+.choice-btn {
+    background-color: #007bff; /* اللون الأزرق للأزرار */
+    color: white;
+}
+
+.choice-btn:hover {
+    background-color: #0056b3; /* لون أزرق أغمق عند التمرير */
+}
+
+/* لون الخلفية للإجابة الصحيحة */
+.choice-btn.correct {
+    background-color: green; /* اللون الأخضر */
+}
+
+/* لون الخلفية للإجابة الخاطئة */
+.choice-btn.wrong {
+    background-color: red; /* اللون الأحمر */
+}
+
+
+.skip-btn {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 15px;
+
+}
+
+.skip-btn:hover {
+    background-color: #e64a19; /* لون أغمق عند التمرير */
+}

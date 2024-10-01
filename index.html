@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz ?</h1>
+        <label for="numQuestions">Choose the number of questions : </label>
+        <input type="range" id="numQuestions" min="1" max="60" value="10" oninput="updateQuestionCount(this.value)">
+        <span id="questionCount">10</span>
+        <br>
+        <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
+    </div>
+    <div class="quiz-content" id="quizContent">
+        <!-- Quiz questions will be displayed here -->
+    </div>
+    <div class="quiz-actions" id="quizActions" style="display: none;">
+        <button class="restart-btn" onclick="restartQuiz()">restart Quiz </button>
+        <button class="new-quiz-btn" onclick="startNewQuiz()">New Quiz </button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
